@@ -1,0 +1,22 @@
+// Online C++ compiler to run C++ program online
+//factorial on n numbers using recursion 
+#include <iostream>
+using namespace std;
+int fib(int n){
+    //basecase
+    if (n==0 or n==1){
+        return n;
+    }
+    //recursive case
+    int small1=fib(n-1);
+    int small2=fib(n-2);
+    //using small answers to get big answer
+    return small1+small2;
+}
+int main() {
+    
+   int n;
+   cin>>n;
+   cout<<fib(n);
+    return 0;
+}
