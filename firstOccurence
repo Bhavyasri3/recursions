@@ -1,0 +1,21 @@
+// Online C++ compiler to run C++ program online
+#include <iostream>
+using namespace std;
+int Firstoccur(int *arr, int key,int n){
+    //basecase
+    if(n==0 )return -1;
+    
+    //recursive careturn 0;se
+    if(arr[0]==key)return 0;
+    int smallans =Firstoccur(arr+1,key,n-1);
+   //using snamm ansm to get big ans
+   if (smallans==-1)return -1;
+   else  return smallans+1;
+}
+int main() {
+    int arr[]={1,3,7,4,7,6};
+    int key=7;
+    cout<<Firstoccur(arr,key,7)<<endl;
+
+    return 0;
+}
