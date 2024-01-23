@@ -8,7 +8,7 @@ int Lastoccur(int *arr, int key,int n){
     //recursive case
    
     int smallans =Lastoccur(arr+1,key,n-1);
-   //using snamm ansm to get big ans
+   //using small ans to get big ans
    if (smallans==-1)
    {
        if(arr[0]==key)return 0;
